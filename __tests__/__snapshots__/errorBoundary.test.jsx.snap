@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ErrorFallbackComponent /> renderClientSafeComponent correctly 1`] = `ShallowWrapper {}`;
+
+exports[`<ErrorFallbackComponent /> renderErrorComponent correctly 1`] = `
+<div
+  className="safeComponent-error"
+>
+  <h1>
+    Something went wrong in--
+    <span />
+    Component.
+    <p />
+  </h1>
+</div>
+`;
+
+exports[`<ErrorFallbackComponent /> renders correctly 1`] = `[Function]`;
+
+exports[`<ErrorFallbackComponent /> renders correctly 2`] = `[Function]`;

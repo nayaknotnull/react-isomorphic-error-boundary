@@ -9,7 +9,8 @@
     "ssr": "yarn prepareLocalPackage && cd examples/ssr && yarn && gatsby build && gatsby serve",
     "build": "babel src --out-dir build",
     "prepublish": "yarn lint && yarn build",
-    "lint": "eslint ./src --fix"
+    "lint": "eslint ./src --fix",
+    "test": "jest __tests__ --config ./config/jest.config.js"
   },
   "files": [
     "index.js",
@@ -31,6 +32,11 @@
   },
   "homepage": "https://github.com/nayaknotnull/react-isomorphic-error-boundary#readme",
   "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
@@ -41,11 +47,9 @@
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime": "^7.5.5",
     "babel-eslint": "^10.0.3",
-    "prop-types": "^15.7.2",
-    "react": "^16.9.0"
-  },
-  "devDependencies": {
     "cpx": "^1.5.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "3.1.0",
@@ -53,6 +57,7 @@
     "eslint-plugin-extra-rules": "0.0.0-development",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "^24.9.0"
   }
 }

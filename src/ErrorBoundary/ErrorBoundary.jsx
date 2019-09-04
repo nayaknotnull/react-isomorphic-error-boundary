@@ -16,7 +16,7 @@ import {
  * @param {string} componentName
  * @param {*} CustomErrorComponent optional
  */
-const RenderErrorComponent = ({ error, componentName, CustomErrorComponent }) => {
+export const RenderErrorComponent = ({ error, componentName, CustomErrorComponent }) => {
   return React.createElement(
     'div',
     {
@@ -32,7 +32,7 @@ const RenderErrorComponent = ({ error, componentName, CustomErrorComponent }) =>
  * @param {string} componentName
  * @param {function} loggerService custom service to log the errors
  */
-const renderClientSafeComponent = (renderComponent, componentName, loggerService) => {
+export const renderClientSafeComponent = (renderComponent, componentName, loggerService) => {
   return class ErrorBoundary extends React.Component {
     constructor(props) {
       super(props);
@@ -82,7 +82,7 @@ export const functionalSafeComponent = (WrappedComponent, CustomErrorComponent, 
  * @param {*} CustomErrorComponent optional
  * @param {function} loggerService custom service to log the errors
  */
-const wrapMethod = (methodName, WrappedComponent, CustomErrorComponent, loggerService) => {
+export const wrapMethod = (methodName, WrappedComponent, CustomErrorComponent, loggerService) => {
   const originalMethod = WrappedComponent.prototype[methodName];
   if (!originalMethod) {
     return;
@@ -135,7 +135,7 @@ export const nonFunctionalSafeComponent = (WrappedComponent, CustomErrorComponen
  * @param {*} CustomErrorComponent optional
  * @param {function} loggerService custom service to log the errors
  */
-const SafeComponent = (WrappedComponent, CustomErrorComponent, loggerService) => (!WrappedComponent.prototype[RENDER_METHOD_NAME]
+export const SafeComponent = (WrappedComponent, CustomErrorComponent, loggerService) => (!WrappedComponent.prototype[RENDER_METHOD_NAME]
   ? functionalSafeComponent(WrappedComponent, CustomErrorComponent, loggerService)
   : nonFunctionalSafeComponent(WrappedComponent, CustomErrorComponent, loggerService));
 
