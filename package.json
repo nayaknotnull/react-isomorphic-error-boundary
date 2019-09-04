@@ -1,0 +1,58 @@
+{
+  "name": "react-isomorphic-error-boundary",
+  "version": "1.0.0",
+  "description": "A reusable isomorphic error boundary for React 16+",
+  "main": "index.js",
+  "scripts": {
+    "prepareLocalPackage": "cpx 'build/**/*.{js,jsx}' localPackage/build && cpx '/*.{json,js,md}' localPackage",
+    "csr": "yarn prepareLocalPackage && cd examples/csr && yarn && yarn build && yarn global add serve && serve -s build",
+    "ssr": "yarn prepareLocalPackage && cd examples/ssr && yarn && gatsby build && gatsby serve",
+    "build": "babel src --out-dir build",
+    "prepublish": "yarn lint && yarn build",
+    "lint": "eslint ./src --fix"
+  },
+  "files": [
+    "index.js",
+    "build"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayaknotnull/react-isomorphic-error-boundary.git"
+  },
+  "keywords": [
+    "react",
+    "isomorphic",
+    "error-boundary"
+  ],
+  "author": "Nayak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nayaknotnull/react-isomorphic-error-boundary/issues"
+  },
+  "homepage": "https://github.com/nayaknotnull/react-isomorphic-error-boundary#readme",
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/plugin-transform-flow-strip-types": "^7.0.0",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/runtime": "^7.5.5",
+    "babel-eslint": "^10.0.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "3.1.0",
+    "eslint-detailed-reporter": "^0.7.3",
+    "eslint-plugin-extra-rules": "0.0.0-development",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.11.1"
+  }
+}

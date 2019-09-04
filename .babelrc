@@ -1,0 +1,28 @@
+{
+	"comments": false,
+	"plugins": [
+		"@babel/plugin-proposal-object-rest-spread",
+		"@babel/plugin-proposal-class-properties",
+		"@babel/transform-flow-strip-types",
+		"@babel/plugin-syntax-dynamic-import"
+	],
+	"presets": [
+		[
+			"@babel/env",
+			{
+				"targets": {
+					"browsers": "Last 2 Chrome versions, Firefox ESR",
+					"node": "8.9",
+				},
+			},
+		],
+		[
+			"@babel/preset-react",
+			{
+				"development": false,
+			},
+		],
+	],
+	"ignore": ["node_modules"],
+}
+
