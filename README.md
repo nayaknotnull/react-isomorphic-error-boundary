@@ -37,27 +37,27 @@ $ npm install react-isomorphic-error-boundary
 ## Properties
 
 <details>
-   <summary>WrappedComponent : Component [Class | Function]</summary>
-   *	Required
-   *	Description: Pass the component to be wrapped in error boundary. This is the component which has the probability of throwing error.
+   <summary>WrappedComponent : Component [Class | Function]</summary><br/>
+   *	Required<br/>
+   *	Description: Pass the component to be wrapped in error boundary. This is the component which has the probability of throwing error.<br/>
 </details>
 
 <details>
-   <summary>CustomErrorComponent [Class | Function]</summary>
-   *	Optional
-   *	Description: Although default error component does the job, option to provide a custom error component to the error-boundary HOC is also in place. This allows the developer to customize the error component at their end.
-   *	Props 
-   		-	errorMessage [String]: The error details for the wrapped component
-		-	componentName [String]: The name of the component that has error(s)
+   <summary>CustomErrorComponent [Class | Function]</summary><br/>
+   *	Optional<br/>
+   *	Description: Although default error component does the job, option to provide a custom error component to the error-boundary HOC is also in place. This allows the developer to customize the error component at their end.<br/>
+   *	Props <br/>
+   		-	errorMessage [String]: The error details for the wrapped component<br/>
+		-	componentName [String]: The name of the component that has error(s)<br/>
 </details>
     
 <details>
-   <summary>loggerService [Function]</summary>
-   *	Optional
-   *	Description: The HOC offers to log the error information in the console [client and server side]. There is provision that the developer can provide to get a custom logger in place. This helps in standardizing the logging of this utility and keeps it in sync with the logging patterns of the entire application.
-   *	Params - error object
-		- thrown error object
-		- extra error information [contains component name]
+   <summary>loggerService [Function]</summary><br/>
+   *	Optional <br/>
+   *	Description: The HOC offers to log the error information in the console [client and server side]. There is provision that the developer can provide to get a custom logger in place. This helps in standardizing the logging of this utility and keeps it in sync with the logging patterns of the entire application.<br/>
+   *	Params - error object<br/>
+		- thrown error object<br/>
+		- extra error information [contains component name]<br/>
 </details>
 
 
