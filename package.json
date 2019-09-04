@@ -4,7 +4,7 @@
   "description": "A reusable isomorphic error boundary for React 16+",
   "main": "index.js",
   "scripts": {
-    "prepareLocalPackage": "cpx 'build/**/*.{js,jsx}' localPackage/build && cpx '/*.{json,js,md}' localPackage",
+    "prepareLocalPackage": "cpx 'build/**/*.{js,jsx}' localPackage/build && cpx '*.{json,js,md}' localPackage",
     "csr": "yarn prepareLocalPackage && cd examples/csr && yarn && yarn build && yarn global add serve && serve -s build",
     "ssr": "yarn prepareLocalPackage && cd examples/ssr && yarn && gatsby build && gatsby serve",
     "build": "babel src --out-dir build",
