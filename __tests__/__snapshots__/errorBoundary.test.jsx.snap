@@ -6,12 +6,10 @@ exports[`<ErrorFallbackComponent /> renderErrorComponent correctly 1`] = `
 <div
   className="safeComponent-error"
 >
-  <h1>
-    Something went wrong in--
-    <span />
-    Component.
-    <p />
-  </h1>
+  <FallbackErrorComponent
+    componentName=""
+    errorMessage=""
+  />
 </div>
 `;
 
