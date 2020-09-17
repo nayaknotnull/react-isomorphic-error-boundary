@@ -135,7 +135,7 @@ export const nonFunctionalSafeComponent = (WrappedComponent, CustomErrorComponen
  * @param {*} CustomErrorComponent optional
  * @param {function} loggerService custom service to log the errors
  */
-export const SafeComponent = (WrappedComponent, CustomErrorComponent, loggerService) => (!WrappedComponent.prototype[RENDER_METHOD_NAME]
+export const SafeComponent = (WrappedComponent, CustomErrorComponent, loggerService) => (!(WrappedComponent.prototype && WrappedComponent.prototype[RENDER_METHOD_NAME])
   ? functionalSafeComponent(WrappedComponent, CustomErrorComponent, loggerService)
   : nonFunctionalSafeComponent(WrappedComponent, CustomErrorComponent, loggerService));
 
