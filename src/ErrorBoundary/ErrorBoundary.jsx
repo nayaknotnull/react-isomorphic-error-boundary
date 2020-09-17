@@ -22,7 +22,7 @@ export const RenderErrorComponent = ({ error, componentName, CustomErrorComponen
     {
       className: DEFAULT_CLASS_NAME,
     },
-    (CustomErrorComponent || FallbackErrorComponent).call(this, { errorMessage: error.message, componentName })
+    React.createElement(CustomErrorComponent || FallbackErrorComponent, { errorMessage: error.message, componentName })
   );
 };
 
